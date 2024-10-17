@@ -1,0 +1,95 @@
+.loader {
+  width: 60px;
+  aspect-ratio: 4;
+  --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+  background:
+    var(--_g) 0% 50%,
+    var(--_g) 50% 50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 100%;
+  animation: l7 1s infinite linear;
+  margin: auto;
+  margin-top: 20%;
+}
+@keyframes l7 {
+  33% {
+    background-size:
+      calc(100% / 3) 0%,
+      calc(100% / 3) 100%,
+      calc(100% / 3) 100%;
+  }
+  50% {
+    background-size:
+      calc(100% / 3) 100%,
+      calc(100% / 3) 0%,
+      calc(100% / 3) 100%;
+  }
+  66% {
+    background-size:
+      calc(100% / 3) 100%,
+      calc(100% / 3) 100%,
+      calc(100% / 3) 0%;
+  }
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #000;
+  color: aliceblue;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 50px;
+}
+
+.babylonCanvas {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.button-wrap {
+  width: 20%;
+  display: block;
+  float: left;
+  margin: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+}
+
+.navButton {
+  display: block;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.description-wrap {
+  width: 20%;
+  display: block;
+  float: left;
+  padding-left: 16px;
+}
+
+.specifications-wrap {
+  width: 45%;
+  margin-top: 16px;
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+  float: left;
+}
+
+.specNav-button {
+  width: 20%;
+  margin-right: 16px;
+}
