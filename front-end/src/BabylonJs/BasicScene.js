@@ -6,7 +6,7 @@ import ModelImport from "./ModelImport";
 export class BasicScene {
   constructor(canvas, cad) {
     const engine = new Engine(canvas, true);
-    engine.setHardwareScalingLevel(0.4); //kasarsa commente al
+    // engine.setHardwareScalingLevel(0.4); //kasarsa commente al
 
     // var loadingScreen = new CustomLoadingScreen();
     // engine.loadingScreen = loadingScreen;
@@ -14,8 +14,6 @@ export class BasicScene {
     // engine.displayLoadingUI();
     const scene = new Scene(engine);
     scene.autoClear = false;
-
-    console.log(cad);
 
     if (cad) {
       ModelImport("./models/", cad, scene, engine);
@@ -36,6 +34,7 @@ export class BasicScene {
     camera.inputs.attached.mousewheel.wheelPrecision = 20;
 
     engine.runRenderLoop(() => {
+      engine.resize();
       scene.render();
     });
   }

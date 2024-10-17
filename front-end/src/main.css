@@ -33,6 +33,8 @@
 }
 
 body {
+  background-color: #000;
+  color: white;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -43,7 +45,7 @@ h1 {
 button {
   font-size: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: #000;
+  background-color: #5e5e5e;
   color: aliceblue;
   cursor: pointer;
   border-radius: 10px;
@@ -51,10 +53,14 @@ button {
 }
 
 .babylonCanvas {
+  background-color: white;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
   display: block;
   float: left;
   width: 50%;
-  height: 100%;
+  height: 500px;
 }
 
 .button-wrap {
@@ -71,6 +77,13 @@ button {
   display: block;
   margin-bottom: 16px;
   width: 100%;
+}
+
+.navButton-clicked {
+  display: block;
+  margin-bottom: 16px;
+  width: 100%;
+  background-color: #000;
 }
 
 .description-wrap {
@@ -92,4 +105,25 @@ button {
 .specNav-button {
   width: 20%;
   margin-right: 16px;
+}
+
+.specNav-clicked {
+  width: 20%;
+  margin-right: 16px;
+  background-color: black;
+}
+
+.specs {
+  display: block;
+  width: 20%;
+  margin-right: 16px;
+  float: left;
+}
+
+.specs-text {
+  display: block;
+  width: 20%;
+  margin-right: 16px;
+  float: left;
+  font-weight: bold;
 }

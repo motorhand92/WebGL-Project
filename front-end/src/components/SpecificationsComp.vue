@@ -1,40 +1,84 @@
 <template>
   <h3>Specifications</h3>
   <div>
-    <button class="specNav-button" @click="Case">Case</button>
-    <button class="specNav-button" @click="Dial">Dial</button>
-    <button class="specNav-button" @click="Movement">Movement</button>
-    <button class="specNav-button" @click="Strap">Strap</button>
+    <button v-if="this.specs !== 'Case'" class="specNav-button" @click="Case">Case</button>
+    <button v-if="this.specs === 'Case'" class="specNav-clicked">Case</button>
+    <button v-if="this.specs !== 'Dial'" class="specNav-button" @click="Dial">Dial</button>
+    <button v-if="this.specs === 'Dial'" class="specNav-clicked">Dial</button>
+    <button v-if="this.specs !== 'Movement'" class="specNav-button" @click="Movement">Movement</button>
+    <button v-if="this.specs === 'Movement'" class="specNav-clicked">Movement</button>
+    <button v-if="this.specs !== 'Strap'" class="specNav-button" @click="Strap">Strap</button>
+    <button v-if="this.specs === 'Strap'" class="specNav-clicked">Strap</button>
   </div>
   <div v-if="this.specs === 'Case'">
-    <h5>{{ this.specs }}</h5>
     <div v-for="item in this.product.specifications" :key="item">
-      <div v-for="spec in item.case" :key="spec">
-        <li>{{ spec[0] }} : {{ spec[1] }}</li>
+      <div class="specs-text">
+        <ul v-for="spec in item.case" :key="spec">
+          {{
+            spec[0]
+          }}
+        </ul>
+      </div>
+      <div class="specs">
+        <ul v-for="spec in item.case" :key="spec">
+          {{
+            spec[1]
+          }}
+        </ul>
       </div>
     </div>
   </div>
   <div v-if="this.specs === 'Dial'">
-    <h5>{{ this.specs }}</h5>
     <div v-for="item in this.product.specifications" :key="item">
-      <div v-for="spec in item.dial" :key="spec">
-        <li>{{ spec[0] }} : {{ spec[1] }}</li>
+      <div class="specs-text">
+        <ul v-for="spec in item.dial" :key="spec">
+          {{
+            spec[0]
+          }}
+        </ul>
+      </div>
+      <div class="specs">
+        <ul v-for="spec in item.dial" :key="spec">
+          {{
+            spec[1]
+          }}
+        </ul>
       </div>
     </div>
   </div>
   <div v-if="this.specs === 'Movement'">
-    <h5>{{ this.specs }}</h5>
     <div v-for="item in this.product.specifications" :key="item">
-      <div v-for="spec in item.movement" :key="spec">
-        <li>{{ spec[0] }} : {{ spec[1] }}</li>
+      <div class="specs-text">
+        <ul v-for="spec in item.movement" :key="spec">
+          {{
+            spec[0]
+          }}
+        </ul>
+      </div>
+      <div class="specs">
+        <ul v-for="spec in item.movement" :key="spec">
+          {{
+            spec[1]
+          }}
+        </ul>
       </div>
     </div>
   </div>
   <div v-if="this.specs === 'Strap'">
-    <h5>{{ this.specs }}</h5>
     <div v-for="item in this.product.specifications" :key="item">
-      <div v-for="spec in item.strap" :key="spec">
-        <li>{{ spec[0] }} : {{ spec[1] }}</li>
+      <div class="specs-text">
+        <ul v-for="spec in item.strap" :key="spec">
+          {{
+            spec[0]
+          }}
+        </ul>
+      </div>
+      <div class="specs">
+        <ul v-for="spec in item.strap" :key="spec">
+          {{
+            spec[1]
+          }}
+        </ul>
       </div>
     </div>
   </div>
