@@ -35,36 +35,44 @@
 body {
   background-color: #000;
   color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
   text-align: center;
+  font-weight: 200;
 }
 
 button {
   font-size: 20px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: #5e5e5e;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 200;
   color: aliceblue;
+  background-color: #5e5e5e;
   cursor: pointer;
   border-radius: 10px;
   height: 50px;
 }
 
+button:active {
+  background-color: #000;
+}
+
 .babylonCanvas {
+  box-sizing: border-box;
   background-color: white;
   border-style: solid;
   border-radius: 10px;
   border-color: white;
   display: block;
   float: left;
-  width: 50%;
+  width: 100%;
   height: 500px;
 }
 
 .button-wrap {
-  width: 20%;
+  box-sizing: border-box;
+  width: 50%;
   display: block;
   float: left;
   margin: auto;
@@ -87,14 +95,16 @@ button {
 }
 
 .description-wrap {
-  width: 20%;
+  box-sizing: border-box;
+  width: 50%;
   display: block;
   float: left;
   padding-left: 16px;
 }
 
 .specifications-wrap {
-  width: 45%;
+  box-sizing: border-box;
+  width: 100%;
   margin-top: 16px;
   display: block;
   padding-left: 16px;
@@ -103,27 +113,56 @@ button {
 }
 
 .specNav-button {
-  width: 20%;
-  margin-right: 16px;
+  box-sizing: border-box;
+  width: 25%;
+  padding-right: 16px;
 }
 
 .specNav-clicked {
-  width: 20%;
-  margin-right: 16px;
+  box-sizing: border-box;
+  width: 25%;
+  padding-right: 16px;
   background-color: black;
 }
 
 .specs {
   display: block;
-  width: 20%;
   margin-right: 16px;
   float: left;
 }
 
 .specs-text {
   display: block;
-  width: 20%;
+  width: 175px;
   margin-right: 16px;
   float: left;
   font-weight: bold;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+}
+
+.main-columns {
+  width: 50%;
+  min-width: 600px;
+  display: block;
+}
+
+.summary-container {
+  display: flex;
+  justify-content: baseline;
+}
+
+.product-name {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: baseline;
+}
+
+.product-text {
+  font-weight: 400;
+  padding-left: 16px;
 }

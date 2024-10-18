@@ -1,18 +1,24 @@
 <template>
   <h1>FAVRE - LEUBA 3D WATCH DISPLAYER</h1>
-  <div>
-    <BabylonJsComp :product="product" />
-  </div>
-  <div class="button-wrap">
-    <div v-for="item in productData" :key="item.id">
-      <button class="navButton" @click="OpenBabylon(item.id)">{{ item.id }}</button>
+  <div class="main-container">
+    <div class="main-columns">
+      <BabylonJsComp :product="product" />
     </div>
-  </div>
-  <div class="description-wrap">
-    <DescriptionComp :product="product" />
-  </div>
-  <div class="specifications-wrap">
-    <SpecificationsComp :product="product" />
+    <div class="main-columns">
+      <div class="summary-container">
+        <div class="button-wrap">
+          <div v-for="item in productData" :key="item.id">
+            <button class="navButton" @click="OpenBabylon(item.id)">{{ item.id }}</button>
+          </div>
+        </div>
+        <div class="description-wrap">
+          <DescriptionComp :product="product" />
+        </div>
+      </div>
+      <div class="specifications-wrap">
+        <SpecificationsComp :product="product" />
+      </div>
+    </div>
   </div>
 </template>
 
