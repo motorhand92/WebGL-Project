@@ -68,6 +68,7 @@ button:active {
   float: left;
   width: 100%;
   height: 500px;
+  margin-top: 16px;
 }
 
 .button-wrap {
