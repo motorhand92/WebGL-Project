@@ -16,7 +16,7 @@ Usage:
 
 # project install
 
-git clone
+git clone or code download.zip
 
 # project test
 
