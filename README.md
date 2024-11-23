@@ -20,6 +20,4 @@ git clone or code download.zip
 
 # project test
 
-cd front-end
-npm run serve
-http://localhost:8080/
+cd front-end -> npm run serve -> http://localhost:8080/
